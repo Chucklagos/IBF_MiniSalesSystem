@@ -12,5 +12,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.php">Venta de Pupusas</a>
       </div>
-      <input type="button">
+      <form action="reset_database.php" method="post">
+        <input class="btn btn-warning" type="submit" name="reset_database" value="Limpiar Base de datos">
+      </form>
     </nav>
