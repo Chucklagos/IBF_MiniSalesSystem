@@ -15,7 +15,7 @@
       </div>
       <?php session_unset(); } ?>
 
-      <div class="card card-body text-light" style="background-color:#0F4C81">
+      <div class="card card-body">
         <form action="register_purchase.php" method="POST">
           <div class="form-group">
             <input type="text" name="Nombre" class="form-control" placeholder="Nombre del cliente" autofocus>
@@ -40,14 +40,15 @@
       </div>
     </div>
     <div class="col-md-8">
-      <table class="table table-bordered text-light table-sm">
-        <thead>
+      <table class="table table-sm table-hover">
+        <thead class="thead-light">
           <tr>
             <th>Nombre</th>
             <th>Cant. Mixtas</th>
             <th>Cant. Quesillo</th>
             <th>Cant. Chicharron</th>
             <th>Total</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -64,7 +65,7 @@
             <td><?php echo $row['Cantidad_Chicharron']; ?></td>
             <td><?php echo $row['Total']; ?></td>
             <td>
-              <a href="delete_purchase.php?id=<?php echo $row['id']?>" class="btn btn-danger">x</a>
+              <a href="delete_purchase.php?id=<?php echo $row['id']?>" class="btn btn-danger"><img src="icon/trash.svg" width="20" height="20" ></a>
             </td>
           </tr>
           <?php } ?>

@@ -41,12 +41,14 @@
         $cTotal=$cCantidad*15;
         $totalGlobal=$mTotal+$qTotal+$cTotal;
         ?>
-      <table class="table table-bordered text-light table-sm">
+      <table class="table table-sm table-hover">
+        <thead class="thead-light">
         <tr>
-          <td>Pupusa</td>
-          <td>Cantidad Vendida</td>
-          <td>Total</td>
+          <th>Pupusa</th>
+          <th>Cantidad Vendida</th>
+          <th>Total</th>
         </tr>
+        </thead>
         <tr>
           <td>Mixtas</td>
           <td><?php echo $mCantidad ?></td>
@@ -68,7 +70,7 @@
           <td style="background-color:#D4AC0D"><?php echo $totalGlobal ?></td>
         </tr>
       </table>
-      <a href="index.php" class="btn btn-warning">Volver</a>
+      <div class="container"><a href="index.php" class="btn btn-warning">Volver</a></div>
     </div>
   </div>
 </main>
