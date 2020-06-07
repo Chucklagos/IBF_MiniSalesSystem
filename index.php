@@ -28,13 +28,13 @@
           <input type="submit" name="register_purchase" class="btn btn-success btn-block" value="Registrar Compra">
         </form>
         <br>
-        <form action="register_credit.php" method="post">
+        <form action="register_credit.php" method="post" iconv>
           <input type="submit" name="register_credit" class="btn btn-warning btn-block" value="Registrar Fiado">
         </form>
         <br>
         <form action="totals.php" method="post">
           <div class="form-group">
-            <input type="submit" name="totals" class="btn btn-light btn-block" value="Ver Totales">
+            <input type="submit" name="totals" class="btn btn-secondary btn-block" value="Ver Totales">
           </div>
         </form>
       </div>
