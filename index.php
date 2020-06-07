@@ -21,16 +21,20 @@
             <input type="text" name="Nombre" class="form-control" placeholder="Nombre del cliente" autofocus>
           </div>
           <div class="form-group">
-            <br><label>¿Cuantas Mixtas?</label><input type="number" name="C_Mixtas" class="form-control" placeholder="¿Cuantas Mixtas?" value="0" autofocus>
-            <br><label>¿Cuantas de Quesillo?</label><input type="number" name="C_Quesillo" class="form-control" value="0" autofocus>
-            <br><label>¿Cuantas de Chicharron?</label><input type="number" name="C_Chicharron" class="form-control" value="0" autofocus>
+            <br><label>¿Cuantas Mixtas?</label><input type="number" min="0" name="C_Mixtas" class="form-control" placeholder="¿Cuantas Mixtas?" value="0" autofocus>
+            <br><label>¿Cuantas de Quesillo?</label><input type="number" min="0" name="C_Quesillo" class="form-control" value="0" autofocus>
+            <br><label>¿Cuantas de Chicharron?</label><input type="number" min="0" name="C_Chicharron" class="form-control" value="0" autofocus>
             </div>
           <input type="submit" name="register_purchase" class="btn btn-success btn-block" value="Registrar Compra">
         </form>
         <br>
+        <form action="register_credit.php" method="post">
+          <input type="submit" name="register_credit" class="btn btn-warning btn-block" value="Registrar Fiado">
+        </form>
+        <br>
         <form action="totals.php" method="post">
           <div class="form-group">
-            <input type="submit" name="totals" class="btn btn-warning btn-block" value="Ver Totales">
+            <input type="submit" name="totals" class="btn btn-light btn-block" value="Ver Totales">
           </div>
         </form>
       </div>
@@ -60,9 +64,7 @@
             <td><?php echo $row['Cantidad_Chicharron']; ?></td>
             <td><?php echo $row['Total']; ?></td>
             <td>
-              <a href="delete_purchase.php?id=<?php echo $row['id']?>" class="btn btn-danger">
-                x
-              </a>
+              <a href="delete_purchase.php?id=<?php echo $row['id']?>" class="btn btn-danger">x</a>
             </td>
           </tr>
           <?php } ?>
@@ -71,3 +73,5 @@
     </div>
   </div>
 </main>
+</body>
+</html>

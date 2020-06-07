@@ -58,8 +58,8 @@
           <td><?php echo $qTotal ?></td>
         </tr>
         <tr>
-          <td>Mixtas</td>
-          <td><?php echo $mCantidad ?></td>
+          <td>Chicharron</td>
+          <td><?php echo $cCantidad ?></td>
           <td><?php echo $cTotal ?></td>
         </tr>
         <tr>
