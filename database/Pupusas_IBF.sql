@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 07-06-2020 a las 02:59:12
+-- Tiempo de generación: 07-06-2020 a las 22:36:46
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -33,7 +33,8 @@ CREATE TABLE `Cliente` (
   `Cantidad_Mixtas` int(11) NOT NULL,
   `Cantidad_Quesillo` int(11) NOT NULL,
   `Cantidad_Chicharron` int(11) NOT NULL,
-  `Total` int(11) NOT NULL
+  `Total` int(11) NOT NULL,
+  `Pago` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -54,7 +55,7 @@ ALTER TABLE `Cliente`
 -- AUTO_INCREMENT de la tabla `Cliente`
 --
 ALTER TABLE `Cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

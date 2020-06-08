@@ -7,8 +7,9 @@ if (isset($_POST['register_purchase'])) {
   $C_Mixtas = $_POST['C_Mixtas'];
   $C_Quesillo = $_POST['C_Quesillo'];
   $C_Chicharron = $_POST['C_Chicharron'];
+  $Pago = $_POST['Pago'];
   $Total = ($C_Chicharron+$C_Quesillo+$C_Mixtas)*15;
-  $query = "INSERT INTO Cliente VALUES (id,'$Nombre', '$C_Mixtas','$C_Quesillo','$C_Chicharron','$Total')";
+  $query = "INSERT INTO Cliente VALUES (id,'$Nombre', '$C_Mixtas','$C_Quesillo','$C_Chicharron','$Total','$Pago')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

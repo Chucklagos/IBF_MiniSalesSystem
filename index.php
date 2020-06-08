@@ -18,23 +18,23 @@
       <div class="card card-body">
         <form action="register_purchase.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Nombre" class="form-control" placeholder="Nombre del cliente" autofocus>
+            <input type="text" name="Nombre" class="form-control" placeholder="Nombre del cliente" maxlength="30" autofocus>
           </div>
           <div class="form-group">
-            <br><label>¿Cuantas Mixtas?</label><input type="number" min="0" name="C_Mixtas" class="form-control" placeholder="¿Cuantas Mixtas?" value="0" autofocus>
-            <br><label>¿Cuantas de Quesillo?</label><input type="number" min="0" name="C_Quesillo" class="form-control" value="0" autofocus>
-            <br><label>¿Cuantas de Chicharron?</label><input type="number" min="0" name="C_Chicharron" class="form-control" value="0" autofocus>
+            <label>¿Cuantas Mixtas?</label><input type="number" min="0" name="C_Mixtas" class="form-control" placeholder="¿Cuantas Mixtas?" value="0" autofocus>
+            <br><label>¿Cuantas de Quesillo?</label><input type="number" min="0" max="10000" name="C_Quesillo" class="form-control" value="0" autofocus>
+            <br><label>¿Cuantas de Chicharron?</label><input type="number" min="0" max="10000" name="C_Chicharron" class="form-control" value="0" autofocus>
+            <br><label>¿Paga?</label><select name="Pago" class="form-control" max="10000" autofocus>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
             </div>
           <input type="submit" name="register_purchase" class="btn btn-success btn-block" value="Registrar Compra">
         </form>
         <br>
-        <form action="register_credit.php" method="post" iconv>
-          <input type="submit" name="register_credit" class="btn btn-warning btn-block" value="Registrar Fiado">
-        </form>
-        <br>
         <form action="totals.php" method="post">
           <div class="form-group">
-            <input type="submit" name="totals" class="btn btn-secondary btn-block" value="Ver Totales">
+            <input type="submit" name="totals" class="btn btn-warning btn-block" value="Ver Totales">
           </div>
         </form>
       </div>
@@ -48,6 +48,7 @@
             <th>Cant. Quesillo</th>
             <th>Cant. Chicharron</th>
             <th>Total</th>
+            <th>¿Pagó?</th>
             <th></th>
           </tr>
         </thead>
@@ -64,6 +65,7 @@
             <td><?php echo $row['Cantidad_Quesillo']; ?></td>
             <td><?php echo $row['Cantidad_Chicharron']; ?></td>
             <td><?php echo $row['Total']; ?></td>
+            <td><?php echo $row['Pago']; ?></td>
             <td>
               <a href="delete_purchase.php?id=<?php echo $row['id']?>" class="btn btn-danger"><img src="icon/trash.svg" width="20" height="20" ></a>
             </td>
