@@ -6,6 +6,10 @@
     <form action="reset_database.php" method="post">
         <input type="submit" class="btn btn-danger" name="reset_database" value="Limpiar base de datos">
     </form>
+    <br><br>
+    <form action="index.php">
+        <input type="submit" class="btn btn-warning" value="Volver">
+    </form>
 </div>
 </body>
 </html>
