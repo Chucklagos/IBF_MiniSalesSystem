@@ -157,7 +157,7 @@
                 </tr>
               </thead>
           <?php
-          $query = "SELECT * FROM Cliente WHERE Pago='No' ORDER BY id DESC";
+          $query = "SELECT * FROM Cliente WHERE Pago='No' ORDER BY Total DESC";
           $result_tasks = mysqli_query($conn, $query);    
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
