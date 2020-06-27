@@ -5,6 +5,7 @@
     <title>Iglesia Bautista Filadelfia</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="bootstrap/bootstrap.min.js"></script>
   </head>
   <!--body style="background-color:#0F4C81"-->
