@@ -6,9 +6,10 @@
     
     <dialog id="modal" class="bg-light">
     <form action="reset_database.php" method="post">
-        <label>¿Esta seguro que quiere limpiar la base de datos?<br>Se borrarán todos los registros</label><br>
-        <input type="submit" class="btn btn-danger" name="reset_database" value="Limpiar base de datos"><br><br>
-        <a href="advanced_options.php" class="btn btn-warning">Cancelar</a>
+        <label>¿Esta seguro que quiere limpiar la base de datos?<br>Se borrarán todos los registros</label>
+        <br><br>
+        <input type="submit" class="btn btn-danger" name="reset_database" value="Si, estoy seguro"><br><br>
+        <a href="index.php" class="btn btn-warning">Volver a la página principal</a>
     </form>
     </dialog>
     <button id="button" class="btn btn-danger">Limpiar base de datos</button>
