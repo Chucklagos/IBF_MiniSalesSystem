@@ -21,17 +21,16 @@
             <input type="text" name="Nombre" required class="form-control" placeholder="Nombre del cliente" maxlength="30" autofocus>
           </div>
           <div class="form-group">
-            <label>¿Cuantas Mixtas?</label><input type="number" min="0" max="10000" name="C_Mixtas" class="form-control" placeholder="¿Cuantas Mixtas?" value="0" autofocus>
-            <br><label>¿Cuantas de Quesillo?</label><input type="number" min="0" max="10000" name="C_Quesillo" class="form-control" value="0" autofocus>
-            <br><label>¿Cuantas de Chicharron?</label><input type="number" min="0" max="10000" name="C_Chicharron" class="form-control" value="0" autofocus>
+            <label>¿Cuantas Mixtas?</label><input type="number" min="0" max="10000" name="C_Mixtas" class="form-control" placeholder="¿Cuantas Mixtas?" value="0" autofocus required>
+            <br><label>¿Cuantas de Quesillo?</label><input type="number" min="0" max="10000" name="C_Quesillo" class="form-control" value="0" autofocus required>
+            <br><label>¿Cuantas de Chicharron?</label><input type="number" min="0" max="10000" name="C_Chicharron" class="form-control" value="0" autofocus required>
             <br><label>¿Paga?</label><select name="Pago" class="form-control" autofocus>
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
             </div>
-          <input type="submit" name="register_purchase" class="btn btn-success btn-block" value="Registrar Compra">
+          <input type="submit" name="register_purchase" class="btn btn-success btn-block" value="Registrar Compra"><br>
         </form>
-        <br>
         <form action="totals.php" method="post">
           <div class="form-group">
             <input type="submit" name="totals" class="btn btn-warning btn-block" value="Ver Totales">

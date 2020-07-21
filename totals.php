@@ -1,5 +1,9 @@
 <?php include ("db.php") ?>
 <?php include ("header.php") ?>
+<!-- ATENCION! esta variable es el precio con el que se sacara los totales -->
+<?php $Precio=18; ?>
+<!-- debe ser cambiado manualmente en el codigo hasta que se implemente la funcion que lo administre -->
+
 
 <main class="container p-4">
   <div class="row">
@@ -37,9 +41,9 @@
             $qCantidad=$qCantidad+$row['Cantidad_Quesillo'];
             $cCantidad=$cCantidad+$row['Cantidad_Chicharron'];
           } 
-        $mTotal=$mCantidad*15;
-        $qTotal=$qCantidad*15;
-        $cTotal=$cCantidad*15;
+        $mTotal=$mCantidad*$Precio;
+        $qTotal=$qCantidad*$Precio;
+        $cTotal=$cCantidad*$Precio;
         $totalGlobal=$mTotal+$qTotal+$cTotal;
         ?>
       <table class="table table-sm table-hover">
@@ -109,9 +113,9 @@
             $qCantidad=$qCantidad+$row['Cantidad_Quesillo'];
             $cCantidad=$cCantidad+$row['Cantidad_Chicharron'];
           } 
-        $mTotal=$mCantidad*15;
-        $qTotal=$qCantidad*15;
-        $cTotal=$cCantidad*15;
+        $mTotal=$mCantidad*$Precio;
+        $qTotal=$qCantidad*$Precio;
+        $cTotal=$cCantidad*$Precio;
         $totalGlobal=$mTotal+$qTotal+$cTotal;
         ?>
       <table class="table table-sm table-hover">
