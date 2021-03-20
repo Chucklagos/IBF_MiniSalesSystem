@@ -3,8 +3,8 @@ session_start();
 
 $conn = mysqli_connect(
   'localhost',
-  'root',
-  '',
+  'iglesia',
+  'iglesia',
   'Pupusas_IBF'
 ) or die(mysqli_erro($mysqli));
 

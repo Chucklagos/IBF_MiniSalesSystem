@@ -17,7 +17,7 @@
         <label>Total Pagadas</label>
           <?php
           $query = "SELECT * FROM Cliente WHERE Pago='Si' ORDER BY id DESC";
-          $result_tasks = mysqli_query($conn, $query);    
+          $result_tasks = mysqli_query($conn, $query);
           $mCantidad=0;
           $qCantidad=0;
           $cCantidad=0;
@@ -25,7 +25,7 @@
           $qTotal=0;
           $cTotal=0;
           $totalGlobal=0;
-          
+
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
@@ -40,7 +40,7 @@
             $mCantidad=$mCantidad+$row['Cantidad_Mixtas'];
             $qCantidad=$qCantidad+$row['Cantidad_Quesillo'];
             $cCantidad=$cCantidad+$row['Cantidad_Chicharron'];
-          } 
+          }
         $mTotal=$mCantidad*$Precio;
         $qTotal=$qCantidad*$Precio;
         $cTotal=$cCantidad*$Precio;
@@ -89,7 +89,7 @@
          <label>Total Fiadas</label>
           <?php
           $query = "SELECT * FROM Cliente WHERE Pago='No' ORDER BY id DESC";
-          $result_tasks = mysqli_query($conn, $query);    
+          $result_tasks = mysqli_query($conn, $query);
           $mCantidad=0;
           $qCantidad=0;
           $cCantidad=0;
@@ -97,7 +97,7 @@
           $qTotal=0;
           $cTotal=0;
           $totalGlobal=0;
-          
+
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
@@ -112,7 +112,7 @@
             $mCantidad=$mCantidad+$row['Cantidad_Mixtas'];
             $qCantidad=$qCantidad+$row['Cantidad_Quesillo'];
             $cCantidad=$cCantidad+$row['Cantidad_Chicharron'];
-          } 
+          }
         $mTotal=$mCantidad*$Precio;
         $qTotal=$qCantidad*$Precio;
         $cTotal=$cCantidad*$Precio;
@@ -162,7 +162,7 @@
               </thead>
           <?php
           $query = "SELECT * FROM Cliente WHERE Pago='No' ORDER BY Total DESC";
-          $result_tasks = mysqli_query($conn, $query);    
+          $result_tasks = mysqli_query($conn, $query);
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
@@ -170,10 +170,12 @@
             <td><?php echo $row['Total']; ?></td>
           </tr>
           <?php
-          } 
+          }
         ?>
         </tbody>
         </table>
     </div>
-    <div class="container"><a href="index.php" class="btn btn-warning">Volver</a></div>
 </main>
+<script>
+  window.print();
+</script>

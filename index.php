@@ -31,7 +31,7 @@
             </div>
           <input type="submit" name="register_purchase" class="btn btn-success btn-block" value="Registrar Compra"><br>
         </form>
-        <form action="totals.php" method="post">
+        <form action="totals.php" method="post" target="_blank">
           <div class="form-group">
             <input type="submit" name="totals" class="btn btn-warning btn-block" value="Ver Totales">
           </div>
@@ -55,7 +55,7 @@
 
           <?php
           $query = "SELECT * FROM Cliente ORDER BY id DESC";
-          $result_tasks = mysqli_query($conn, $query);    
+          $result_tasks = mysqli_query($conn, $query);
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
