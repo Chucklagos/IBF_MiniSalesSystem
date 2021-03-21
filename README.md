@@ -19,3 +19,21 @@ quieren saber cuánto vendieron por tipo y cuánto dinero ganaron por tipo.
 
 Este miniproyecto tiene el objetivo de aportar una solución a esta situación, 
 de esta forma no tienen que contar todo manualmente.
+
+------
+
+**Screenshots**
+
+**Página Principal**
+
+![mainpage](img-readme/mainpage.png)
+
+**Opciones**
+
+![options](img-readme/options.png)
+
+![database](img-readme/database.png)
+
+**Generar Reporte**
+
+![reports](img-readme/reports.png)
