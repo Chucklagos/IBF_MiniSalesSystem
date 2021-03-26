@@ -5,7 +5,7 @@ $conn = mysqli_connect(
   'localhost',
   'iglesia',
   'iglesia',
-  'Pupusas_IBF'
+  'pupusas'
 ) or die(mysqli_erro($mysqli));
 
 ?>
