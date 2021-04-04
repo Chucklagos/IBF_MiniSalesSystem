@@ -41,10 +41,47 @@
             $qCantidad=$qCantidad+$row['Cantidad_Quesillo'];
             $cCantidad=$cCantidad+$row['Cantidad_Chicharron'];
           }
-        $mTotal=$mCantidad*$Precio;
+
+/*
+if ($CantidadTotal%2==0) {
+  $Total = ($CantidadTotal/2)*35;
+} else if ($CantidadTotal==1) {
+  $Total=18;
+} else {
+  $Total=((($CantidadTotal-1)/2)*35)+18;
+}
+*/
+
+        if ($mCantidad%2==0) {
+          $mTotal = ($mCantidad/2)*35;
+        } else if ($mCantidad==1) {
+          $mTotal=18;
+        } else {
+          $mTotal=((($mCantidad-1)/2)*35)+18;
+        }
+
+        if ($qCantidad%2==0) {
+          $qTotal = ($qCantidad/2)*35;
+        } else if ($qCantidad==1) {
+          $qTotal=18;
+        } else {
+          $qTotal=((($qCantidad-1)/2)*35)+18;
+        }
+
+        if ($cCantidad%2==0) {
+          $cTotal = ($cCantidad/2)*35;
+        } else if ($cCantidad==1) {
+          $cTotal=18;
+        } else {
+          $cTotal=((($cCantidad-1)/2)*35)+18;
+        }
+        /*$mTotal=$mCantidad*$Precio;
         $qTotal=$qCantidad*$Precio;
-        $cTotal=$cCantidad*$Precio;
+        $cTotal=$cCantidad*$Precio;*/
         $totalGlobal=$mTotal+$qTotal+$cTotal;
+
+
+
         ?>
       <table class="table table-sm table-hover">
         <thead class="thead-light">
@@ -113,10 +150,36 @@
             $qCantidad=$qCantidad+$row['Cantidad_Quesillo'];
             $cCantidad=$cCantidad+$row['Cantidad_Chicharron'];
           }
-        $mTotal=$mCantidad*$Precio;
-        $qTotal=$qCantidad*$Precio;
-        $cTotal=$cCantidad*$Precio;
-        $totalGlobal=$mTotal+$qTotal+$cTotal;
+
+          if ($mCantidad%2==0) {
+            $mTotal = ($mCantidad/2)*35;
+          } else if ($mCantidad==1) {
+            $mTotal=18;
+          } else {
+            $mTotal=((($mCantidad-1)/2)*35)+18;
+          }
+
+          if ($qCantidad%2==0) {
+            $qTotal = ($qCantidad/2)*35;
+          } else if ($qCantidad==1) {
+            $qTotal=18;
+          } else {
+            $qTotal=((($qCantidad-1)/2)*35)+18;
+          }
+
+          if ($cCantidad%2==0) {
+            $cTotal = ($cCantidad/2)*35;
+          } else if ($cCantidad==1) {
+            $cTotal=18;
+          } else {
+            $cTotal=((($cCantidad-1)/2)*35)+18;
+          }
+          /*$mTotal=$mCantidad*$Precio;
+          $qTotal=$qCantidad*$Precio;
+          $cTotal=$cCantidad*$Precio;*/
+          $totalGlobal=$mTotal+$qTotal+$cTotal;
+
+
         ?>
       <table class="table table-sm table-hover">
         <thead class="thead-light">
@@ -177,5 +240,5 @@
     </div>
 </main>
 <script>
-  window.print();
+  //window.print();
 </script>
